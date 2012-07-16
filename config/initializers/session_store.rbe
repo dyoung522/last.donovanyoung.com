@@ -1,8 +1,8 @@
 # Be sure to restart your server when you modify this file.
 
-DonovanYoung::Application.config.session_store :cookie_store, key: '_www.donovanyoung.com_session'
+Donovan.young::Application.config.session_store :cookie_store, key: '_www.donovanyoung.com_session'
 
 # Use the database for sessions instead of the cookie-based default,
 # which shouldn't be used to store highly confidential information
 # (create the session table with "rails generate session_migration")
-# DonovanYoung::Application.config.session_store :active_record_store
+# Donovan.young::Application.config.session_store :active_record_store
