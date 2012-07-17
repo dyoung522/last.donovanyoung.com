@@ -1,9 +1,20 @@
 /* header */
 
-#logo {
+#text-logo {
   font-size: 10em;
-  color: $grayLighter;
+  color: $grayMediumLight;
   font-family: 'Italianno', cursive;
+
+  white-space:pre-wrap;
+  text-align:left;
+  z-index:1;
+  position:absolute;
+  top:   500px;
+  left: -150px;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+
   &:hover {
     color: $grayLighter;
     text-decoration: none;

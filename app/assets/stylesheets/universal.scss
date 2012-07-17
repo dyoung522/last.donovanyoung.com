@@ -1,22 +1,6 @@
 /* mixins, variables, etc. */
 
-$grayMediumLight: #eaeaea;
-
-@mixin text-rotate($degree) {
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  -webkit-transform-origin: 0 0;
-  -moz-transform-origin:    0 0;
-  -ms-transform-origin:     0 0;
-  -o-transform-origin:      0 0;
-
-  -webkit-transform: rotate($degree);
-  -moz-transform:    rotate($degree);
-  -ms-transform:     rotate($degree);
-  -o-transform:      rotate($degree);
-}
+$grayMediumLight: #e0e0e0;
 
 /* universal */
 
