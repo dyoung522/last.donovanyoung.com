@@ -1,11 +1,18 @@
-<div class="well sidebar-nav">
+<nav class="well sidebar-nav handwrite">
   <ul class="nav nav-pills nav-stacked">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="#">Resume</a></li>
+    <li class="nav-header">Pages</li>
+    <li class="<%= 'active' if params[:action] == 'home' %>">
+      <a href=<%= root_path %>>Home</a>
+    </li>
+    <li class="<%= 'active' if params[:action] == 'resume' %>">
+      <a href=<%= resume_path %>>Resum&eacute;</a>
+    </li>
   </ul>
 
   <ul class="nav nav-pills nav-stacked">
-      <li class="nav-header">Projects</li>
-      <li><a href="#">Improv</a></li>
+    <li class="nav-header">Projects</li>
+    <li class="<%= 'active' if params[:action] == 'improv' %>">
+      <a href="#">Improv</a>
+    </li>
   </ul>
-</div>
+</nav>

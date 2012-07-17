@@ -1,5 +1,6 @@
 DonovanYoung::Application.routes.draw do
   root to: "static_pages#home"
+  match '/resume' => "static_pages#resume"
 
   #match '/home' to: "static_pages#home"
 

@@ -1,6 +1,6 @@
 /* mixins, variables, etc. */
 
-$grayMediumLight: #e0e0e0;
+$grayMediumLight: #eaeaea;
 
 /* universal */
 
@@ -10,6 +10,7 @@ html {
 
 body {
   padding-top: 60px;
+  font-family: 'Droid Sans', sans-serif;
   :hover {
     text-decoration: none;
   }
@@ -55,5 +56,9 @@ h2 {
 p {
   font-size: 1.1em;
   line-height: 1.7em;
+}
+
+.handwrite {
+  font-family: 'Rock Salt', cursive;
 }
 
