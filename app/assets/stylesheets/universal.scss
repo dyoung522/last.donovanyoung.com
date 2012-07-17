@@ -1,8 +1,22 @@
-@import "bootstrap";
-
 /* mixins, variables, etc. */
 
 $grayMediumLight: #eaeaea;
+
+@mixin text-rotate($degree) {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  -webkit-transform-origin: 0 0;
+  -moz-transform-origin:    0 0;
+  -ms-transform-origin:     0 0;
+  -o-transform-origin:      0 0;
+
+  -webkit-transform: rotate($degree);
+  -moz-transform:    rotate($degree);
+  -ms-transform:     rotate($degree);
+  -o-transform:      rotate($degree);
+}
 
 /* universal */
 
@@ -59,44 +73,3 @@ p {
   line-height: 1.7em;
 }
 
-
-/* header */
-
-#logo {
-  /* float: left; */
-  /* margin-right: -10px; */
-  font-size: 10em;
-  color: $grayLighter;
-  font-family: 'Italianno', cursive;
-  &:hover {
-    color: $grayLighter;
-    text-decoration: none;
-  }
-}
-
-/* footer */
-
-footer {
-  margin-top: 45px;
-  padding-top: 5px;
-  border-top: 1px solid $grayMediumLight;
-  text-align: center;
-  color: $grayLight;
-  a {
-    color: $grayLight;
-    &:hover { 
-      color: $grayDarker;
-    }
-  }  
-  small { 
-    float: left; 
-  }
-  ul {
-    float: right;
-    list-style: none;
-    li {
-      float: left;
-      margin-left: 10px;
-    }
-  }
-}

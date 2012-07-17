@@ -1,0 +1,12 @@
+/* header */
+
+#logo {
+  font-size: 10em;
+  color: $grayLighter;
+  font-family: 'Italianno', cursive;
+  &:hover {
+    color: $grayLighter;
+    text-decoration: none;
+  }
+}
+
