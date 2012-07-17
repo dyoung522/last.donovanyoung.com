@@ -6,4 +6,8 @@ module ApplicationHelper
       page_title
     end
   end
+
+  def is_active(page)
+    action_name == page ? 'active' : 'not-active'
+  end
 end
