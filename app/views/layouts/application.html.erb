@@ -10,20 +10,18 @@
 
   <body>
     <div class="container">
-      <div class="row span12">
-        <header>
-          <div id="text-logo"> <%= page_heading( yield(:title) ) %> </div>
-        </header>
+      <header class="row">
+        <div id="text-logo"> <%= page_heading( yield(:title) ) %> </div>
+      </header>
 
-        <div class="row">
-          <div class="span10">
-            <% unless yield(:subtitle).empty? %>
-              <div class="body-header"><%= yield(:subtitle) %></div>
-            <% end %>
-            <div class="row"> <%= yield %> </div>
-          </div>
-          <div class="span2"> <%= render 'layouts/sidebar' %> </div>
+      <div class="row">
+        <div class="span10">
+          <% unless yield(:subtitle).empty? %>
+            <div class="body-header"><%= yield(:subtitle) %></div>
+          <% end %>
+          <%= yield %>
         </div>
+        <div class="span2"> <%= render 'layouts/sidebar' %> </div>
       </div>
       <div class="row"> <%= render 'layouts/footer' %> </div>
     </div>
