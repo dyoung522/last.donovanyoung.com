@@ -17,13 +17,14 @@
       <div class="row">
         <div class="span10">
           <% unless yield(:subtitle).empty? %>
-            <div class="body-header"><%= yield(:subtitle) %></div>
+            <div class="body-header"><%= yield :subtitle %></div>
           <% end %>
-          <%= yield %>
+          <%= yield :head %>
         </div>
         <div class="span2"> <%= render 'layouts/sidebar' %> </div>
       </div>
-      <div class="row"> <%= render 'layouts/footer' %> </div>
+      <%= yield %>
+      <%= render 'layouts/footer' %>
     </div>
   </body>
 </html>
