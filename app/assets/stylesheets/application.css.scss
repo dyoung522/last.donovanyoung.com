@@ -11,9 +11,12 @@
  *= require_self
  */
 
+/* Feature includes */
 @import url(http://fonts.googleapis.com/css?family=Droid+Sans|Italianno|Rock+Salt);
 @import "bootstrap";
-@import "universal.scss";
-@import "header.scss";
-@import "footer.scss";
+
+/* Stylesheets */
+@import "universal.css.scss";
+@import "header.css.scss";
+@import "footer.css.scss";
 

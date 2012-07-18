@@ -9,11 +9,21 @@ html {
 }
 
 body {
-  padding-top: 60px;
   font-family: 'Droid Sans', sans-serif;
+  padding-top: 60px;
   :hover {
     text-decoration: none;
   }
+}
+
+.body-header {
+  color:          $grayLight;
+  text-align:     right;
+  font-size:      2em;
+  margin-top:     0px;
+  margin-bottom:  30px;
+  padding-bottom: 2px;
+  border-bottom:  1px solid $grayLighter;
 }
 
 section {
@@ -31,6 +41,11 @@ textarea {
   }
 }
 
+.padding {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
@@ -45,7 +60,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.7em;
+  font-size: 2em;
   letter-spacing: -1px;
   margin-bottom: 30px;
   text-align: center;
