@@ -21,7 +21,7 @@ body {
   text-align:     right;
   font-size:      2em;
   margin-top:     0px;
-  margin-bottom:  0px;
+  margin-bottom:  60px;
   padding-bottom: 2px;
   border-bottom:  1px solid $grayLighter;
 }
@@ -43,9 +43,7 @@ textarea {
 
 .padding {
   padding-top: 30px;
-  padding-bottom: 30px;
 }
-
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
@@ -55,7 +53,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 3em;
   letter-spacing: -2px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   text-align: center;
 }
 
@@ -77,3 +75,13 @@ p {
   font-family: 'Rock Salt', cursive;
 }
 
+#homepage {
+  padding-top: 60px;
+  
+  h1 {
+    font-family: 'Rock Salt', cursive;
+    font-size: 5em;
+    text-align: center;
+    color: $blue;
+  }
+}

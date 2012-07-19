@@ -1,15 +1,17 @@
 /* footer */
 
+$blueLight: #d9edf7;
+
 footer {
   margin-top: 45px;
   padding-top: 5px;
   border-top: 1px solid $grayMediumLight;
   text-align: center;
-  color: $grayLight;
+  color: $blue;
   a {
-    color: $grayLight;
+    color: $blue;
     &:hover { 
-      color: $grayDarker;
+      color: darken($blue, 50);
     }
   }  
   small { 
