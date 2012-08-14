@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Date:</b>
+  <%= @china_adventure.date %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @china_adventure.title %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= @china_adventure.content %>
+</p>
+
+<%= link_to 'Edit', edit_china_adventure_path(@china_adventure) %> |
+<%= link_to 'Back', china_adventures_path %> |
+<%= link_to 'Destroy', @china_adventure, method: :delete, data: { confirm: 'Are you sure?' } %>

@@ -1,0 +1,17 @@
+.china {
+
+  th {
+    text-align: left;
+    vertical-align: top;
+    min-width: 100px;
+  }
+
+  tr {
+    border-bottom: 5px;
+    padding-bottom: 50px;
+  }
+
+  tr:last-child {
+    border-bottom: none;
+  }
+}

@@ -1,0 +1,2 @@
+module ChinaAdventuresHelper
+end
