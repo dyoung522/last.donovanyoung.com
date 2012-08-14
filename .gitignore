@@ -13,6 +13,7 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+/.idea/*
 
 # Ignore other unneeded files.
 doc/
@@ -21,4 +22,3 @@ doc/
 .project
 .DS_Store
 bundler_stubs/
-
