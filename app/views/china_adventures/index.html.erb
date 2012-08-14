@@ -1,17 +1,12 @@
 <% provide(:title, raw('A China Adventure')) %>
 <% provide(:subtitle, nil) %>
+<% provide(:sidebar, 'suppress') %>
 
-<br />
-
-<table class="china">
+<table class="china_adventure">
 <% @china_adventures.each do |china_adventure| %>
   <tr>
     <th><%= link_to china_adventure.title, china_adventure %></th>
-    <td><%= china_adventure.content %></td>
+    <td><%= raw(china_adventure.content) %></td>
   </tr>
 <% end %>
 </table>
-
-<br />
-
-<%= link_to 'New China adventure', new_china_adventure_path %>

@@ -31,7 +31,7 @@ namespace :china do
           content = String.new
         else
           content = String.new unless content
-          content += line unless line.strip.empty?
+          content += "<p>#{line}</p>" unless line.strip.empty?
         end
       end
 

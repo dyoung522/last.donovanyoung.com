@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
   <head>
     <title>Donovan C. Young</title>
     <%= stylesheet_link_tag    "application", media: "all" %>
@@ -27,9 +27,11 @@
 
         </div>
 
-        <% unless ( yield(:nosidebar) == true ) %>
-          <div class="span3 sidebar"> <%= render 'layouts/sidebar' %> </div>
+        <% unless yield(:sidebar) == 'suppress' %>
+          <div class="span3 sidebar"><%= render 'layouts/sidebar' %></div>
         <% end %>
+
+        <br />
 
         <%= yield %>
 
