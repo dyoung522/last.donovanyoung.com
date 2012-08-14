@@ -22,3 +22,5 @@ doc/
 .project
 .DS_Store
 bundler_stubs/
+
+/app/assets/images/china
