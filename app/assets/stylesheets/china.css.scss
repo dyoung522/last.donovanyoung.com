@@ -46,10 +46,16 @@
     z-index: 1;
 
     &:hover {
-      @include scale(5);
+      @include scale(6);
       @include box-shadow(#{5px 5px 10px rgba(0,0,0,.50)});
       @include transition(#{all .25s ease-in-out});
       z-index: 1000;
+    }
+
+    &:focus {
+      @include scale(1);
+      @include box-shadow(#{1px 1px 5px rgba(0,0,0,.25)});
+      @include transition(#{all .25s ease-in-out});
     }
   }
 
