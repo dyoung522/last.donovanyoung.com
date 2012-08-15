@@ -1,7 +1,17 @@
 /* mixins, variables, etc. */
 
 $grayMediumLight: #eaeaea;
-$text-shadow: 2px 2px 0 rgba(08, 08, 08, .10);
+@mixin text-shadow( $x:2px, $y:2px, $z:0, $c:rgba(08, 08, 08, .10)) {
+  text-shadow: $x $y $z $c;
+}
+
+@mixin transform-origin( $x, $y, $z:'' ) {
+  transform-origin: $x $y $z;
+  -ms-transform-origin: $x $y $z;     /* IE 9 */
+  -webkit-transform-origin: $x $y $z; /* Safari and Chrome */
+  -moz-transform-origin: $x $y $z;    /* Firefox */
+  -o-transform-origin: $x $y $z;      /* Opera */
+}
 
 /* universal */
 

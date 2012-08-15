@@ -10,7 +10,7 @@ namespace :china do
       ChinaAdventure.create( date: date, title: date.strftime('%B %-d'), content: content )
     end
 
-    Dir.glob('lib/china/*.txt').each do |file|
+    Dir.glob('lib/china/*.txt').sort.each do |file|
       next unless File.readable?(file)
 
       puts "Parsing #{file}"
@@ -31,7 +31,7 @@ namespace :china do
         line.gsub!( /\<IMG:(\d+):([LR])\>/,
                     "<img src='/assets/china/#{date.strftime('%Y%m%d')}\\1.jpg' class='float-\\2'>") if /\<IMG:/ =~ line
 
-        content += "<p class='clearfix'>#{line}</p>" unless line.strip.empty?
+        content += "<p>#{line}</p>" unless line.strip.empty?
       end
 
       # Save the last record

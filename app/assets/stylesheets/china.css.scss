@@ -1,5 +1,6 @@
-.china_adventure {
+.china_adventures {
   border-collapse: collapse;
+  background-color: #fdfdfd;
 
   p {
     clear: both;
@@ -9,7 +10,7 @@
       color: $blueDark;
       font-size: 2em;
       margin-right: 2px;
-      text-shadow: $text-shadow;
+      @include text-shadow;
     }
   }
 
@@ -19,7 +20,7 @@
     vertical-align: top;
     width: 150px;
     padding: 10px;
-    text-shadow: $text-shadow;
+    @include text-shadow;
   }
 
   td {
@@ -36,26 +37,20 @@
   }
 
   img {
-    @include scale(1);
-    @include box-shadow(#{1px 1px 5px rgba(0,0,0,.25)});
-    @include transition(#{all .25s ease-in-out});
     margin: 5px;
     width: 100px;
     height: auto;
     position: relative;
     z-index: 1;
+    @include scale(1);
+    @include box-shadow(#{1px 1px 5px rgba(0,0,0,.25)});
+    @include transition(#{all .25s ease-in-out});
 
-    &:hover {
-      @include scale(6);
+    &:hover, &:active {
+      @include scale(5);
       @include box-shadow(#{5px 5px 10px rgba(0,0,0,.50)});
       @include transition(#{all .25s ease-in-out});
       z-index: 1000;
-    }
-
-    &:focus {
-      @include scale(1);
-      @include box-shadow(#{1px 1px 5px rgba(0,0,0,.25)});
-      @include transition(#{all .25s ease-in-out});
     }
   }
 
