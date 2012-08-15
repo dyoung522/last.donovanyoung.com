@@ -5,7 +5,7 @@
 <table class="china_adventure">
 <% @china_adventures.each do |china_adventure| %>
   <tr>
-    <th><%= link_to china_adventure.title, china_adventure %></th>
+    <th><%= china_adventure.title %></th>
     <td><%= raw(china_adventure.content) %></td>
   </tr>
 <% end %>
