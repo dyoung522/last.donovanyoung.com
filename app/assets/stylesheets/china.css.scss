@@ -1,11 +1,25 @@
 .china_adventure {
   border-collapse: collapse;
 
+  p {
+    clear: both;
+
+    &:first-child:first-letter {
+      font-family: 'Italianno', cursive;
+      color: $blueDark;
+      font-size: 2em;
+      margin-right: 2px;
+      text-shadow: $text-shadow;
+    }
+  }
+
   th {
+    font-size: 1.5em;
     text-align: left;
     vertical-align: top;
-    min-width: 100px;
+    width: 150px;
     padding: 10px;
+    text-shadow: $text-shadow;
   }
 
   td {
@@ -21,29 +35,31 @@
   }
 
   img {
-    @include clearfix();
     @include scale(1);
-    @include box-shadow(#{2px 2px 5px rgba(0,0,0,.25)});
+    @include box-shadow(#{1px 1px 5px rgba(0,0,0,.25)});
     @include transition(#{all .25s ease-in-out});
+    margin: 5px;
     width: 100px;
-    padding: none;
-    z-index: 0;
+    height: auto;
+    position: relative;
+    z-index: 1;
 
     &:hover {
       @include scale(5);
       @include box-shadow(#{5px 5px 10px rgba(0,0,0,.50)});
       @include transition(#{all .25s ease-in-out});
-      z-index: 1;
+      z-index: 1000;
     }
   }
 
   .float-L {
     float: left;
     margin-right: 10px;
+    margin-left: 0;
   }
 
   .float-R {
     float: right;
     margin-left: 10px;
-  }
+    margin-right: 0;}
 }

@@ -1,51 +1,41 @@
 namespace :china do
   desc "Reads a text file and inserts journal entries into the database"
-  task :journal2db => :environment do
+  task :txt2db => :environment do
     require 'date'
 
-    unless ARGV[1]
-      puts "Usage: rake #{ARGV[0]} <files>"
-      exit
+    def save_record ( date, content )
+      return unless date && content
+      obj = ChinaAdventure.find_by_date( date )
+      obj.destroy unless obj.nil?
+      ChinaAdventure.create( date: date, title: date.strftime('%B %-d'), content: content )
     end
 
-    # Shift off program name
-    ARGV.shift
-
-    ARGV.each do |file|
-      unless File.readable?(file)
-        puts "#{file} does not exist or is not readable to us."
-        next
-      end
-
-      date = nil
-      title, content = String.new
+    Dir.glob('lib/china/*.txt').each do |file|
+      next unless File.readable?(file)
 
       puts "Parsing #{file}"
 
-      File.open(file).each do |line|
-        content = String.new unless content
+      date = nil
+      content = String.new
 
+      File.open(file).each do |line|
         if line =~ /^\s*(june|july|august|september)\s+\d+\s*$/i
           # Save the record
-          ChinaAdventure.create( date: date, title: title, content: content ) if (date && content)
+          save_record( date, content )
+
           date = Date.parse("#{line.strip!}, 2012")
-          title = date.strftime('%B %-d')
           content = String.new
           next
         end
 
-        if line =~ /\<IMG:/
-          content += line.gsub( /\<IMG:(\d+):([LR])\>/,
-                                "<img src='/assets/china/#{date.strftime('%Y%m%d')}\\1.jpg' class='float-\\2'>") if date
-          next
-        end
+        line.gsub!( /\<IMG:(\d+):([LR])\>/,
+                    "<img src='/assets/china/#{date.strftime('%Y%m%d')}\\1.jpg' class='float-\\2'>") if /\<IMG:/ =~ line
 
-        content += "<p>#{line}</p>" unless line.strip.empty?
-
+        content += "<p class='clearfix'>#{line}</p>" unless line.strip.empty?
       end
 
       # Save the last record
-      ChinaAdventure.create( date: date, title: title, content: content ) if (date && content)
+      save_record( date, content )
     end
   end
 end
