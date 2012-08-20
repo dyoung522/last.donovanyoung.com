@@ -1,6 +1,6 @@
 namespace :china do
   desc "Reads a text file and inserts journal entries into the database"
-  task :txt2db => :environment do
+  task :import => :environment do
     require 'date'
 
     def save_record ( date, content )

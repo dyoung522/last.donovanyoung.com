@@ -1,39 +1,26 @@
 .china_adventures {
-  border-collapse: collapse;
   background-color: #fdfdfd;
 
-  p {
+  article {
+    border-top: 1px solid #cfcfcf;
+    border-collapse: collapse;
+    padding: 10px;
     clear: both;
 
-    &:first-child:first-letter {
+    header {
+      font-size: 1.5em;
+      text-align: left;
+      vertical-align: top;
+      @include text-shadow;
+    }
+
+    p:first-child:first-letter {
       font-family: 'Italianno', cursive;
       color: #05C;
       font-size: 2em;
       margin-right: 2px;
       @include text-shadow;
     }
-  }
-
-  th {
-    font-size: 1.5em;
-    text-align: left;
-    vertical-align: top;
-    width: 150px;
-    padding: 10px;
-    @include text-shadow;
-  }
-
-  td {
-    padding: 10px;
-  }
-
-  tr {
-    border-top: 1px solid #cfcfcf;
-    border-bottom: 1px solid #cfcfcf;
-  }
-
-  tr:last-child {
-    border-bottom: none;
   }
 
   img {
@@ -52,17 +39,17 @@
       @include transition(#{all .25s ease-in-out});
       z-index: 1000;
     }
-  }
 
-  .float-L {
-    float: left;
-    margin-right: 10px;
-    margin-left: 0;
-  }
+    &.float-L {
+      float: left;
+      margin-right: 10px;
+      margin-left: 0;
+    }
 
-  .float-R {
-    float: right;
-    margin-left: 10px;
-    margin-right: 0;
+    &.float-R {
+      float: right;
+      margin-left: 10px;
+      margin-right: 0;
+    }
   }
 }

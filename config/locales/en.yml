@@ -3,3 +3,12 @@
 
 en:
   hello: "Hello world"
+  views:
+    pagination:
+      first: "&laquo; Oldest"
+      last: "Newest &raquo;"
+
+      previous: "&lsaquo; Older"
+      next: "Newer &rsaquo;"
+
+      truncate: '...'
