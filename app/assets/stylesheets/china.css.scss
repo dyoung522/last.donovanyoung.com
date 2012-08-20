@@ -5,7 +5,6 @@
     border-top: 1px solid #cfcfcf;
     border-collapse: collapse;
     padding: 10px;
-    clear: both;
 
     header {
       font-size: 1.5em;
@@ -14,12 +13,16 @@
       @include text-shadow;
     }
 
-    p:first-child:first-letter {
-      font-family: 'Italianno', cursive;
-      color: #05C;
-      font-size: 2em;
-      margin-right: 2px;
-      @include text-shadow;
+    p{
+      clear: both;
+
+      &:first-child:first-letter {
+        font-family: 'Italianno', cursive;
+        color: #05C;
+        font-size: 2em;
+        margin-right: 2px;
+        @include text-shadow;
+      }
     }
   }
 
@@ -29,12 +32,11 @@
     height: auto;
     position: relative;
     z-index: 1;
-    @include scale(1);
     @include box-shadow(#{1px 1px 5px rgba(0,0,0,.25)});
     @include transition(#{all .25s ease-in-out});
 
     &:active {
-      @include scale(5);
+      @include scale(10);
       @include box-shadow(#{5px 5px 10px rgba(0,0,0,.50)});
       @include transition(#{all .25s ease-in-out});
       z-index: 1000;

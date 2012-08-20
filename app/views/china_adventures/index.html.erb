@@ -16,7 +16,7 @@ this writing, is undergoing extensive stroke recovery treatments.  This is her j
 <%= paginate @china_adventures %>
 
 <% @china_adventures.each do |china_adventure| %>
-  <article class="row">
+  <article class="row clearfix()">
     <div class="span2"><header><%= china_adventure.title %></header></div>
     <div class="span10"><%= raw(china_adventure.content) %></div>
   </article>
