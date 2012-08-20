@@ -28,18 +28,18 @@
 
   img {
     margin: 5px;
-    width: 100px;
+    width: 150px;
     height: auto;
     position: relative;
     z-index: 1;
     @include box-shadow(#{1px 1px 5px rgba(0,0,0,.25)});
     @include transition(#{all .25s ease-in-out});
 
-    &:active {
-      z-index: 1000;
-      @include scale(6);
+    &:hover {
+      z-index: 9999;
+      @include scale(5);
       @include box-shadow(#{5px 5px 10px rgba(0,0,0,.50)});
-      @include transition(#{all .25s ease-in-out});
+      @include transition(#{all .25s ease-in-out .5s});
     }
 
     &.float-L {
