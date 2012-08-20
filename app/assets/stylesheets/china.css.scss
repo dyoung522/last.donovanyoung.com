@@ -36,10 +36,10 @@
     @include transition(#{all .25s ease-in-out});
 
     &:active {
-      @include scale(10);
+      z-index: 1000;
+      @include scale(6);
       @include box-shadow(#{5px 5px 10px rgba(0,0,0,.50)});
       @include transition(#{all .25s ease-in-out});
-      z-index: 1000;
     }
 
     &.float-L {

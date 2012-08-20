@@ -28,8 +28,10 @@ namespace :china do
           next
         end
 
-        line.gsub!( /\<IMG:(\d+):([LR])\>/,
-                    "<img src='/assets/china/#{date.strftime('%Y%m%d')}\\1.jpg' class='float-\\2'>") if /\<IMG:/ =~ line
+        if /\<IMG:/ =~ line
+          line.gsub!(/\<IMG:(\d+):([LR])\>/,
+                     "<img src='/assets/china/#{date.strftime('%Y%m%d')}\\1.jpg' class='float-\\2 zoom'>")
+        end
 
         content += "<p>#{line}</p>" unless line.strip.empty?
       end
