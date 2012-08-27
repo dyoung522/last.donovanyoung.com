@@ -5,9 +5,11 @@ namespace :china do
 
     def save_record ( date, content )
       return unless date && content
-      obj = ChinaAdventure.find_by_date( date )
-      obj.destroy unless obj.nil?
-      ChinaAdventure.create( date: date, title: date.strftime('%B %-d'), content: content )
+      obj = ChinaAdventure.where( date: date ).first_or_create
+      obj.title   = date.strftime('%B %-d')
+      obj.content = content
+      obj.save
+      puts "Saved #{obj.title}"
     end
 
     Dir.glob('lib/china/*.txt').sort.each do |file|
@@ -19,7 +21,7 @@ namespace :china do
       content = String.new
 
       File.open(file).each do |line|
-        if line =~ /^\s*(june|july|august|september)\s+\d+\s*$/i
+        if line =~ /\A\s*(june|july|august|september)\s+\d+/i
           # Save the record
           save_record( date, content )
 
