@@ -5,11 +5,20 @@ namespace :china do
 
     def save_record ( date, content )
       return unless date && content
-      obj = ChinaAdventure.where( date: date ).first_or_create
-      obj.title   = date.strftime('%B %-d')
-      obj.content = content
-      obj.save
-      puts "Saved #{obj.title}"
+
+      if ( obj = ChinaAdventure.where( date: date ).first )
+        unless ( obj.content.encode == content.encode )
+          obj.content = content
+          obj.save
+          puts "Saved changes for #{obj.title}"
+        end
+      else
+        ChinaAdventure.create( date: date, 
+                               title: date.strftime('%B %-d'),
+                               content: content
+                             )
+        puts "Created new object for #{date}"
+      end
     end
 
     Dir.glob('lib/china/*.txt').sort.each do |file|
@@ -22,12 +31,13 @@ namespace :china do
 
       File.open(file).each do |line|
         if line =~ /\A\s*(june|july|august|september)\s+\d+/i
-          # Save the record
+          # Save the previous record first
           save_record( date, content )
 
           date = Date.parse("#{line.strip!}, 2012")
           content = String.new
-          next
+
+          next # to the next record
         end
 
         if /\<IMG:/ =~ line
