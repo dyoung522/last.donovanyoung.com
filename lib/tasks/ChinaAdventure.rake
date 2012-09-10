@@ -1,5 +1,5 @@
 namespace :china do
-  desc "Reads a text file and inserts journal entries into the database"
+  desc "Imports text files into the China Journal database"
   task :import => :environment do
     require 'date'
 
@@ -8,9 +8,10 @@ namespace :china do
 
       if ( obj = ChinaAdventure.where( date: date ).first )
         unless ( obj.content.encode == content.encode )
+          print "Saving changes for #{obj.title}... "
           obj.content = content
           obj.save
-          puts "Saved changes for #{obj.title}"
+          puts "OKAY"
         end
       else
         ChinaAdventure.create( date: date, 
