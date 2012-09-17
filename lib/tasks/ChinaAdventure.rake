@@ -42,7 +42,7 @@ namespace :china do
         end
 
         if /\<IMG:/ =~ line
-          line.gsub!(/\<IMG:(\d+):([LR])\>/,
+          line.gsub!(/\<IMG:(\d+):([LCR])\>/,
                      "<img src='/assets/china/#{date.strftime('%Y%m%d')}\\1.jpg' class='float-\\2 zoom'>")
         end
 
