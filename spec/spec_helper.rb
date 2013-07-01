@@ -1,4 +1,5 @@
 require 'rubygems'
+require 'capybara'
 require 'spork'
 
 Spork.prefork do
