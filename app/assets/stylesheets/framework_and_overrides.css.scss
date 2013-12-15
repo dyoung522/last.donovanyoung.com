@@ -1,0 +1,70 @@
+// Variables //
+@import '_variables';
+$grayMediumLight: #eaeaea;
+
+// import the CSS framework
+@import "bootstrap";
+
+// Mixins //
+@mixin text-shadow( $x:2px, $y:2px, $z:0, $c:rgba(08, 08, 08, .10)) {
+  text-shadow: $x $y $z $c;
+}
+
+@mixin transform-origin( $x, $y, $z:'' ) {
+  transform-origin: $x $y $z;
+  -ms-transform-origin: $x $y $z;     /* IE 9 */
+  -webkit-transform-origin: $x $y $z; /* Safari and Chrome */
+  -moz-transform-origin: $x $y $z;    /* Firefox */
+  -o-transform-origin: $x $y $z;      /* Opera */
+}
+
+/*
+// make all images responsive by default
+img {
+  @extend .img-responsive;
+  margin: 0 auto;
+}
+
+// override for the 'Home' navigation link
+.navbar-brand {
+  font-size: inherit;
+}
+
+// THESE ARE EXAMPLES YOU CAN MODIFY
+// create your own classes
+// to make views framework-neutral
+.column {
+  @extend .col-md-6;
+  @extend .text-center;
+}
+
+.form {
+  @extend .col-md-6;
+}
+
+.form-centered {
+  @extend .col-md-6;
+  @extend .text-center;
+}
+
+.submit {
+  @extend .btn;
+  @extend .btn-primary;
+  @extend .btn-lg;
+}
+
+// apply styles to HTML elements
+// to make views framework-neutral
+main {
+  @extend .container;
+  background-color: #eee;
+  padding-bottom: 80px;
+  width: 100%;
+  margin-top: 51px; // accommodate the navbar
+}
+
+section {
+  @extend .row;
+  margin-top: 20px;
+}
+*/

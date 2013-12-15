@@ -26,6 +26,7 @@ group :development do
   # Use debugger
   # gem 'debugger', group: [:development, :test]
   gem 'pry'
+  gem 'rails_layout'
 end
 
 # Gems I've added

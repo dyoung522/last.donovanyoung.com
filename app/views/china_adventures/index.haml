@@ -1,0 +1,20 @@
+- provide(:title, raw('A China Adventure'))
+- provide(:subtitle, nil)
+- provide(:sidebar, 'suppress')
+
+%p
+  %br
+  In December of 2011, my Father suffered a debilitating stroke which left him with acute aphasia and paralysis
+  on his right side.  As part of his road to recovery, my Mother has brought him to
+  = link_to  'The First Teaching Hospital of Tianjin University', 'http://www.tjtcm.cn/english/'
+  where he, at the time of this writing, is undergoing extensive stroke recovery treatments.  This is her journal...
+
+= paginate @china_adventures
+
+- @china_adventures.each do |china_adventure|
+  %article.row
+    %header.col-md-2= china_adventure.title
+    .col-md-10= raw(china_adventure.content)
+
+= paginate @china_adventures
+

@@ -1,43 +1,41 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>DonovanYoung</title>
-      <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-      <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-      <%= csrf_meta_tags %>
-    </head>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= content_for?(:title) ? yield(:title) : "Donovan C. Young" %></title>
+  <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Donovan C. Young" %>">
+  <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body class="<%= params[:controller] %>">
+<div class="container">
 
-    <body class="<%= params[:controller] %>">
-    <div class="container">
+  <%= render 'layouts/messages' %>
 
-      <header class="row">
-        <div id="text-logo"> <%= page_heading( yield(:title) ) %> </div>
-        <br />
-      </header>
+  <header class="row">
+    <div id="text-logo" class="col-sm-12"> <%= page_heading(yield(:title)) %> </div>
+  </header>
 
-      <div class="row">
+  <div class="row">
 
-        <div class="span9">
-          <% unless yield(:subtitle).empty? %>
-              <div class="body-header"><%= yield :subtitle %></div>
-          <% end %>
-
-          <%= yield :head %>
-
-        </div>
-
-        <% unless yield(:sidebar) == 'suppress' %>
-            <div class="span3 sidebar"><%= render 'layouts/sidebar' %></div>
-        <% end %>
-
-        <br />
-
-        <%= yield %>
-
-      </div>
-      <div class="row"> <%= render 'layouts/footer' %> </div>
+    <div class="col-sm-9">
+      <% unless yield(:subtitle).empty? %>
+          <div class="body-header"><%= yield :subtitle %></div>
+      <% end %>
+      <%= yield :head %>
     </div>
-    </div>
-    </body>
+
+    <% unless yield(:sidebar) == 'suppress' %>
+        <div class="sidebar"><%= render 'layouts/sidebar' %></div>
+    <% end %>
+
+    <main role="main">
+      <%= yield %>
+    </main>
+
+  </div>
+  <div class="row"> <%= render 'layouts/footer' %> </div>
+</div>
+</body>
 </html>
-
