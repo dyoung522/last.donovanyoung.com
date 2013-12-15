@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-DonovanyoungCom::Application.load_tasks
+DonovanYoung::Application.load_tasks
