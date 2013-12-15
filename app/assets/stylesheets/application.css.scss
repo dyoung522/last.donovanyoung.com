@@ -1,0 +1,40 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ */
+
+// Variables //
+$grayMediumLight: #eaeaea;
+
+// Feature includes //
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans|Italianno|Rock+Salt);
+@import "bootstrap";
+
+// Mixins //
+@mixin text-shadow( $x:2px, $y:2px, $z:0, $c:rgba(08, 08, 08, .10)) {
+    text-shadow: $x $y $z $c;
+}
+
+@mixin transform-origin( $x, $y, $z:'' ) {
+    transform-origin: $x $y $z;
+    -ms-transform-origin: $x $y $z;     /* IE 9 */
+    -webkit-transform-origin: $x $y $z; /* Safari and Chrome */
+    -moz-transform-origin: $x $y $z;    /* Firefox */
+    -o-transform-origin: $x $y $z;      /* Opera */
+}
+
+// Additional Stylesheets //
+@import "universal.css.scss";
+@import "sidebar.css.scss";
+@import "header.css.scss";
+@import "footer.css.scss";
+@import "me.css.scss";
+@import "china.css.scss";

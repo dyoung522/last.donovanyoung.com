@@ -1,14 +1,43 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>DonovanYoung</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+    <head>
+      <title>DonovanYoung</title>
+      <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+      <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+      <%= csrf_meta_tags %>
+    </head>
 
-<%= yield %>
+    <body class="<%= params[:controller] %>">
+    <div class="container">
 
-</body>
+      <header class="row">
+        <div id="text-logo"> <%= page_heading( yield(:title) ) %> </div>
+        <br />
+      </header>
+
+      <div class="row">
+
+        <div class="span9">
+          <% unless yield(:subtitle).empty? %>
+              <div class="body-header"><%= yield :subtitle %></div>
+          <% end %>
+
+          <%= yield :head %>
+
+        </div>
+
+        <% unless yield(:sidebar) == 'suppress' %>
+            <div class="span3 sidebar"><%= render 'layouts/sidebar' %></div>
+        <% end %>
+
+        <br />
+
+        <%= yield %>
+
+      </div>
+      <div class="row"> <%= render 'layouts/footer' %> </div>
+    </div>
+    </div>
+    </body>
 </html>
+

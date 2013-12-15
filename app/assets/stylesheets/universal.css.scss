@@ -1,0 +1,84 @@
+// universal //
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  font-family: 'Droid Sans', sans-serif;
+  padding-top: 60px;
+  :hover {
+    text-decoration: none;
+  }
+}
+
+.body-header {
+  color:          $gray-Light;
+  text-align:     right;
+  font-size:      2em;
+  margin-top:     0px;
+  margin-bottom:  60px;
+  padding-bottom: 2px;
+  border-bottom:  1px solid $gray-Lighter;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+  h1 {
+    margin-bottom: 10px;
+  }
+}
+
+.padding {
+  padding-top: 30px;
+}
+
+// typography //
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: $gray-Light;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+.handwrite {
+  font-family: 'Rock Salt', cursive;
+}
+
+#homepage {
+  padding-top: 60px;
+  
+  h1 {
+    /* font-family: 'Rock Salt', cursive; */
+    font-size: 4em;
+    text-align: center;
+    color: $blueDark;
+  }
+}
