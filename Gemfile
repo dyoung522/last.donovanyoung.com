@@ -1,25 +1,24 @@
 source 'https://rubygems.org'
 
-gem 'rails', '~> 3.2.13'
-gem 'bootstrap-sass'
-gem 'bcrypt-ruby'
-gem 'kaminari-bootstrap'
-gem 'jquery-rails'
-gem 'sqlite3'
+ruby '2.0.0'
 
-# Gems used only for assets and not required
-# in production environments by default.
-group :assets do
-  gem 'haml'
-  gem 'sass-rails'
-  gem 'coffee-rails'
-  gem 'uglifier'
-end
+gem 'rails', '~> 4.0.0'
+gem 'bcrypt-ruby'
+gem 'jquery-rails'
+gem 'pg'
+gem 'haml'
+gem 'coffee-rails'
+gem 'uglifier'
+gem 'sass-rails', '>= 3.2' # sass-rails needs to be higher than 3.2
+gem 'bootstrap-sass', '~> 3.0.3.0'
+gem 'kaminari-bootstrap'
+gem 'passenger'
 
 group :test, :development do
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'hirb'
+  gem 'pry'
 end
 
 group :test do

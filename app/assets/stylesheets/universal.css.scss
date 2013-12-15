@@ -13,13 +13,13 @@ body {
 }
 
 .body-header {
-  color:          $grayLight;
+  color:          $gray-Light;
   text-align:     right;
   font-size:      2em;
   margin-top:     0px;
   margin-bottom:  60px;
   padding-bottom: 2px;
-  border-bottom:  1px solid $grayLighter;
+  border-bottom:  1px solid $gray-Lighter;
 }
 
 section {
@@ -60,7 +60,7 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: $grayLight;
+  color: $gray-Light;
 }
 
 p {

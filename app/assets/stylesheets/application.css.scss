@@ -11,12 +11,12 @@
  *= require_self
  */
 
+// Variables //
+$grayMediumLight: #eaeaea;
+
 // Feature includes //
 @import url(http://fonts.googleapis.com/css?family=Droid+Sans|Italianno|Rock+Salt);
 @import "bootstrap";
-
-// Variables //
-$grayMediumLight: #eaeaea;
 
 // Mixins //
 @mixin text-shadow( $x:2px, $y:2px, $z:0, $c:rgba(08, 08, 08, .10)) {
