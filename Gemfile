@@ -34,4 +34,5 @@ gem 'bootstrap-sass', '~> 3.0.3.0'
 gem 'kaminari-bootstrap'
 gem 'passenger'
 gem 'haml'
+gem 'comfortable_mexican_sofa', '~> 1.11.0'
 

@@ -1,4 +1,5 @@
 DonovanYoung::Application.routes.draw do
+
   # China Adventure
   resources :china, controller: 'china_adventures', only: :index do
     get ':page', action: :index, on: :collection
@@ -11,5 +12,11 @@ DonovanYoung::Application.routes.draw do
 
   # Home Page
   root to: "me#home"
+
+  comfy_route :cms_admin, :path => '/admin'
+
+  # Make sure this routeset is defined last
+  comfy_route :cms, :path => '/', :sitemap => false
+
 end
 
