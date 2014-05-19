@@ -24,15 +24,17 @@ end
 
 group :development do
   # Use debugger
-  # gem 'debugger', group: [:development, :test]
+  gem 'debugger', group: [:development, :test]
+  gem 'foreman'
   gem 'pry'
   gem 'rails_layout'
 end
 
 # Gems I've added
 gem 'bootstrap-sass', '~> 3.0.3.0'
-gem 'kaminari-bootstrap'
-gem 'passenger'
+gem 'kaminari-bootstrap', '~> 3.0.1'
 gem 'haml'
+gem 'simple_form'
+gem 'unicorn'
 gem 'comfortable_mexican_sofa', '~> 1.11.0'
 
