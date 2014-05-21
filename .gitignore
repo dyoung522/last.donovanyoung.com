@@ -16,6 +16,7 @@
 /.idea
 
 # Ignore other unneeded files.
+.env
 doc/
 *.swp
 *~
@@ -23,3 +24,4 @@ doc/
 .DS_Store
 /.ruby-*
 bundler_stubs/
+/public/assets/
