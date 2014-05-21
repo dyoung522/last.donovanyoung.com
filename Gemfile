@@ -38,3 +38,4 @@ gem 'simple_form'
 gem 'unicorn'
 gem 'comfortable_mexican_sofa', '~> 1.11.0'
 
+gem 'rails_12factor'
