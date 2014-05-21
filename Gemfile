@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.1.1'
 
-gem 'rails', '~> 4.0.0'
+gem 'rails', '~> 4.1.0'
 gem 'pg'
 gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
@@ -23,12 +23,13 @@ group :doc do
 end
 
 group :development do
-  # Use debugger
-  gem 'debugger', group: [:development, :test]
   gem 'foreman'
   gem 'pry'
   gem 'rails_layout'
 end
+
+# Use debugger
+gem 'debugger', group: [:development, :test]
 
 # Gems I've added
 gem 'bootstrap-sass', '~> 3.0.3.0'
