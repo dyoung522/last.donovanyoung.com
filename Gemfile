@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.1.1'
+ruby '2.1.4'
 
 gem 'rails', '~> 4.1.0'
 gem 'pg'
@@ -29,7 +29,7 @@ group :development do
 end
 
 # Use debugger
-gem 'debugger', group: [:development, :test]
+gem 'byebug', group: [:development, :test]
 
 # Gems I've added
 gem 'bootstrap-sass', '~> 3.0.3.0'
